@@ -1,0 +1,32 @@
+{
+  "name": "PerDial",
+  "version": "1.0.0",
+  "description": "Website for PerDial",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perdial/perdial.github.io.git"
+  },
+  "author": "PerDial",
+  "license": "All rights reserved.",
+  "bugs": {
+    "url": "https://github.com/perdial/perdial.github.io/issues"
+  },
+  "homepage": "https://perdial.github.io/",
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "ejs": "^2.5.5",
+    "fs": "0.0.1-security",
+    "gulp": "^3.9.1",
+    "gulp-ejs": "^2.3.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.0.0",
+    "gulp-uglify": "^2.0.0"
+  }
+}
