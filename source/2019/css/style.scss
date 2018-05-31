@@ -37,6 +37,11 @@ header.fixed-header {
     background: rgba(255,255,255,0.9);
     opacity: 1;
   }
+  div.wrapper {
+    width: 100vw;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
   h1 {
     float: left;
     height: 50px;
@@ -173,7 +178,7 @@ section.main {
     padding: 0;
   }
   p + ul {
-    margin: 10px 0 0;
+    margin: 10px 0;
   }
   ul li {
     margin: 4px 0 0 30px;
