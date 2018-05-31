@@ -27,6 +27,9 @@ header.fixed-header {
       padding: 0 10px;
       height: 50px;
       line-height: 50px; }
+    @media (max-width: 760px) {
+      header.fixed-header nav ul {
+        display: none; } }
 
 section.main {
   width: 100vw; }
@@ -46,6 +49,14 @@ section.main {
       padding: 15px 30px 20px;
       background: rgba(0, 0, 0, 0.5);
       box-sizing: border-box; }
+      @media (max-width: 900px) {
+        section.main header h1 {
+          font-size: 2em; } }
+      @media (max-width: 760px) {
+        section.main header h1 {
+          font-size: 1.7em;
+          border-radius: 0;
+          width: 100vw; } }
       section.main header h1 span {
         display: block; }
     section.main header img {
