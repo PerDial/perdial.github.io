@@ -3,7 +3,11 @@
 * {
   padding: 0;
   margin: 0;
+}
+
+html {
   font-family: 'Barlow', sans-serif;
+  font-size: 15px;
 }
 
 header.fixed-header {
@@ -15,10 +19,12 @@ header.fixed-header {
   h1 {
     float: left;
     padding: 5px 10px;
+    font-size: 2rem;
   }
   nav ul {
     float: right;
     padding: 0 15px 0 0;
+    font-size: 1.2rem;
     li {
       float: left;
       list-style: none;
@@ -35,11 +41,18 @@ section.main {
     position: relative;
     padding: 150px 0 100px;
     h1 {
+      width: 90vw;
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: 100px;
       position: relative;
       z-index: 100;
-      font-size: 1.8em;
+      font-size: 2.3rem;
       color: white;
       text-align: center;
+      padding: 15px 30px 20px;
+      background: rgba(0,0,0,0.5);
+      box-sizing: border-box;
       span {
         display: block;
       }
@@ -62,15 +75,38 @@ section.main {
   }
   h2 {
     padding: 0 0 15px;
+    font-size: 1.8rem;
+    i {
+      padding: 0 7px 0 0;
+      font-size: 1.6rem;
+    }
   }
   h3 {
     padding: 15px 0 5px;
+    font-size: 1.4rem;
   }
   h2 + h3 {
     padding: 10px 0 5px;
   }
   p {
-    padding: 10px 0 0;
+    padding: 10px 0 0;    
+    font-size: 1.1rem;
+    hyphens: auto;
+    text-align: justify;
+    text-justify: inter-ideograph;
+  }
+  a {
+    text-decoration: none;
+    color: seagreen;
+    &:after {
+      font-family: FontAwesome;
+      content: "\f08e";
+      font-size: 0.8em;
+      padding: 0 0 0 5px;
+    }
+    &:hover {
+      color: mediumseagreen;
+    }
   }
   h2 + p, h3 + p {
     padding: 0;
@@ -78,15 +114,28 @@ section.main {
   ul li {
     margin: 5px 0 0 30px;
   }
-  dl {
+  dl.important-dates {
     dt {
       float: left;
-      width: 90px;
+      width: 190px;
       padding: 2px;
+      font-weight: bold;
     }
     dd {
-      margin: 0 0 0 100px;
-      padding: 3px;
+      margin: 0 0 0 195px;
+      padding: 2px;
+    }
+  }
+  dl.guideline {
+    dt {
+      float: left;
+      width: 130px;
+      padding: 2px;
+      font-weight: bold;
+    }
+    dd {
+      margin: 0 0 0 135px;
+      padding: 2px;
     }
   }
 
