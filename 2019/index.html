@@ -9,15 +9,16 @@
   <h1><a href="./"><span>PerDial 2019</span></a></h1>
   <nav>
     <ul id="primary-nav">
-      <li data-target="nav-overview">Overview</li>
-      <li data-target="nav-call-for-paper">Call for Paper</li>
-      <li data-target="nav-organizers">Organizers</li>
+      <li data-target="top">Top</li>
+      <li data-target="overview">Overview</li>
+      <li data-target="call-for-paper">Call for Paper</li>
+      <li data-target="organizers">Organizers</li>
     </ul>
   </nav>
 </header>
 
 <section class="main">
-  <header>
+  <header id="top">
     <img src="img/top-visual.jpg">
     <h1><span>The 1st International Workshop on</span>
       <span>Pervasive Computing and Dialogue Systems</span>
@@ -25,7 +26,7 @@
       <small>in conjunction with the IEEE PerCom 2019</small></h1>
   </header>
 
-  <div>
+  <div id="overview">
     <h2>Overview</h2>
     <dl class="overview">
       <dt>Name</dt>
@@ -36,7 +37,7 @@
     </dl>
   </div>
 
-  <div>
+  <div id="call-for-paper">
     <h2><i class="fa fa-bullhorn"></i>Call for Paper</h2>
     <p>The 1st International Workshop on Pervasive Computing and Dialogue Systems (PerDial 2019) aims to serve as a platform for cross-disciplinary discussions on ways, problems, challenges and perspectives of mutual integration of Dialogue Systems and Pervasive Computing technologies.</p>
     <p>Dialogue Systems have been a hot topic of discussion in a research community for the last two decades. They are inalienable part of Human-Computer Interaction, and allow the integration of Artificial Intelligence systems in our everyday lives smoothly and naturally, through an easy, human-like communication. Pervasive Computing technologies can contact user at a close level as well as be insensibly integrated in environment, providing spatially distributed information. Being a part of the smart environment each smart device serves as a mini personal assistant and requires an ability to interact with user to be able to be more adaptive, user-friendly and effective. </p>
@@ -63,7 +64,7 @@
     </dl>
   </div>
 
-  <div>
+  <div id="organizers">
     <h2><i class="fa fa-user-circle-o"></i>Organizers</h2>
     <h3>Program Committee (*potential)</h3>
     <ul>
@@ -110,5 +111,10 @@ $(window).scroll(function() {
     isTopArea = true;
     $("#fixed-header").removeClass("scrolled");
   }
+});
+$(function() {console.log("check");});
+$("#primary-nav li").click(function() {
+  var target = $(this).data("target");
+  $("html, body").animate({scrollTop:$("#" + target).offset().top - 50});
 });
 </script>
