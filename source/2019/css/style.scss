@@ -5,6 +5,12 @@
   margin: 0;
 }
 
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
 html {
   font-family: 'Barlow', sans-serif;
   font-size: 15px;
@@ -168,16 +174,31 @@ section.main {
   ul li {
     margin: 5px 0 0 30px;
   }
+  img.overview-logo {
+    float: right;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    @media (max-width: 760px) {
+      width: 100px;
+      height: 100px;
+      padding: 10px;
+    }
+    @media (max-width: 550px) {
+      display: none;
+    }
+  }
   dl.overview {
     font-size: 1.5rem;
     dt {
       float: left;
-      width: 90px;
+      width: 40px;
       padding: 2px;
       font-weight: bold;
+      text-align: center;
     }
     dd {
-      margin: 0 0 0 95px;
+      margin: 0 0 0 45px;
       padding: 2px;
       &.percom {
         font-size: 1.3rem;

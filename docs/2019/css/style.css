@@ -3,6 +3,11 @@
   padding: 0;
   margin: 0; }
 
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both; }
+
 html {
   font-family: 'Barlow', sans-serif;
   font-size: 15px;
@@ -139,15 +144,29 @@ section.main {
     padding: 0; }
   section.main ul li {
     margin: 5px 0 0 30px; }
+  section.main img.overview-logo {
+    float: right;
+    width: 200px;
+    height: 200px;
+    padding: 20px; }
+    @media (max-width: 760px) {
+      section.main img.overview-logo {
+        width: 100px;
+        height: 100px;
+        padding: 10px; } }
+    @media (max-width: 550px) {
+      section.main img.overview-logo {
+        display: none; } }
   section.main dl.overview {
     font-size: 1.5rem; }
     section.main dl.overview dt {
       float: left;
-      width: 90px;
+      width: 40px;
       padding: 2px;
-      font-weight: bold; }
+      font-weight: bold;
+      text-align: center; }
     section.main dl.overview dd {
-      margin: 0 0 0 95px;
+      margin: 0 0 0 45px;
       padding: 2px; }
       section.main dl.overview dd.percom {
         font-size: 1.3rem; }
