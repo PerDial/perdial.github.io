@@ -9,6 +9,9 @@ html {
   font-family: 'Barlow', sans-serif;
   font-size: 15px;
   background: #f9f9f9;
+  @media (max-width: 760px) {
+    font-size: 13px;
+  }
 }
 
 header.fixed-header {
@@ -16,18 +19,33 @@ header.fixed-header {
   z-index: 1000;
   height: 50px;
   width: 100vw;
+  border: 1px solid rgba(0,0,0,0);
+  border-width: 0 0 1px;
   text-shadow: 0 0 2px white;
   background: rgba(255,255,255,0);
   opacity: 0.8;
   transition: all 0.2s ease 0s;
   &.scrolled {
+    border: 1px solid rgba(0,0,0,0.1);
     background: rgba(255,255,255,0.9);
     opacity: 1;
   }
   h1 {
     float: left;
-    padding: 5px 20px;
-    font-size: 2rem;
+    height: 50px;
+    padding: 0 10px;
+    a {
+      display: block;
+      background: url("../img/logo-header.png") center center no-repeat;
+      background-size: 100%;
+      width: 180px;
+      height: 30px;
+      padding: 10px 10px;
+      float: left;
+      span {
+        display: none;
+      }
+    }
   }
   nav ul {
     float: right;
@@ -57,16 +75,24 @@ section.main {
       border-radius: 100px;
       position: relative;
       z-index: 100;
-      font-size: 2.3rem;
       color: white;
       text-align: center;
-      text-shadow: 2px 2px 4px black;
+      font-size: 2.3rem;
       span {
         display: block;
+        text-shadow: 2px 2px 4px black;
+      }
+      small {
+        display: inline-block;
+        font-size: 0.6em;
+        color: black;
+        background: rgba(255,255,255,0.9);
+        border-radius: 30px;
+        margin: 10px 0 0;
+        padding: 5px 20px;
       }
       @media (max-width: 760px) {
         font-size: 1.7em;
-        border-radius: 0;
       }
       @media (max-width: 580px) {
         span {
@@ -85,12 +111,12 @@ section.main {
   }
   & > div {
     max-width: 1000px;
-    width: 96vw;
+    width: 94vw;
     margin: 30px auto;
     padding: 30px 40px 35px;
     @media (max-width: 760px) {
       margin: 20px auto;
-      padding: 20px;
+      padding: 15px;
     }
     background: white;
     border-radius: 5px;
@@ -137,6 +163,22 @@ section.main {
   }
   ul li {
     margin: 5px 0 0 30px;
+  }
+  dl.overview {
+    font-size: 1.5rem;
+    dt {
+      float: left;
+      width: 90px;
+      padding: 2px;
+      font-weight: bold;
+    }
+    dd {
+      margin: 0 0 0 95px;
+      padding: 2px;
+      &.percom {
+        font-size: 1.3rem;
+      }
+    }
   }
   dl.important-dates {
     dt {
