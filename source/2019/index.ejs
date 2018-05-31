@@ -5,7 +5,7 @@
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="stylesheet" href="css/style.css">
 
-<header class="fixed-header">
+<header class="fixed-header" id="fixed-header">
   <h1>PerDial 2019</h1>
   <nav>
     <ul>
@@ -27,13 +27,15 @@
 
   <div>
     <h2>Overview</h2>
-    <p>The 1st International Workshop on Pervasive Computing and Dialogue Systems (PerDial 2019) aims to serve as a platform for cross-disciplinary discussions on ways, problems, challenges and perspectives of mutual integration of Dialogue Systems and Pervasive Computing technologies.</p>
-    <p>Dialogue Systems have been a hot topic of discussion in a research community for the last two decades. They are inalienable part of Human-Computer Interaction, and allow the integration of Artificial Intelligence systems in our everyday lives smoothly and naturally, through an easy, human-like communication. Pervasive Computing technologies can contact user at a close level as well as be insensibly integrated in environment, providing spatially distributed information. Being a part of the smart environment each smart device serves as a mini personal assistant and requires an ability to interact with user to be able to be more adaptive, user-friendly and effective. </p>
-    <p>While both topics have recently been an interest of researchers and questions of integration between pervasive computing and dialogue systems are not studied deeply, the proposed workshop will help to explore possible challenges and suggestions to overcome them. We aim to create the first and unique opportunity for discussion and collaboration between experts from these disciplines. </p>
+    <p>in conjunction with the IEEE PerCom '19, 11-15, March 2019</p>
+    <p>The 1st International Workshop on Pervasive Computing and Dialogue Systems (PerDial 2019)</p>
   </div>
 
   <div>
     <h2><i class="fa fa-bullhorn"></i>Call for Paper</h2>
+    <p>The 1st International Workshop on Pervasive Computing and Dialogue Systems (PerDial 2019) aims to serve as a platform for cross-disciplinary discussions on ways, problems, challenges and perspectives of mutual integration of Dialogue Systems and Pervasive Computing technologies.</p>
+    <p>Dialogue Systems have been a hot topic of discussion in a research community for the last two decades. They are inalienable part of Human-Computer Interaction, and allow the integration of Artificial Intelligence systems in our everyday lives smoothly and naturally, through an easy, human-like communication. Pervasive Computing technologies can contact user at a close level as well as be insensibly integrated in environment, providing spatially distributed information. Being a part of the smart environment each smart device serves as a mini personal assistant and requires an ability to interact with user to be able to be more adaptive, user-friendly and effective. </p>
+    <p>While both topics have recently been an interest of researchers and questions of integration between pervasive computing and dialogue systems are not studied deeply, the proposed workshop will help to explore possible challenges and suggestions to overcome them. We aim to create the first and unique opportunity for discussion and collaboration between experts from these disciplines. </p>
   </div>
 
   <div>
@@ -87,3 +89,21 @@
 <footer>
   &copy; International Workshop on Pervasive Computing and Dialogue Systems
 </footer>
+
+<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script>
+var isTopArea = true;
+$(window).scroll(function() {
+  if(isTopArea && $(this).scrollTop() > 50) {
+    isTopArea = false;
+    $("#fixed-header").addClass("scrolled");
+  }
+  if(!isTopArea && $(this).scrollTop() < 50) {
+    isTopArea = true;
+    $("#fixed-header").removeClass("scrolled");
+  }
+});
+</script>

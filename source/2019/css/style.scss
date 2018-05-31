@@ -8,6 +8,7 @@
 html {
   font-family: 'Barlow', sans-serif;
   font-size: 15px;
+  background: #f9f9f9;
 }
 
 header.fixed-header {
@@ -15,10 +16,17 @@ header.fixed-header {
   z-index: 1000;
   height: 50px;
   width: 100vw;
-  background: rgba(255,255,255,0.8);
+  text-shadow: 0 0 2px white;
+  background: rgba(255,255,255,0);
+  opacity: 0.8;
+  transition: all 0.2s ease 0s;
+  &.scrolled {
+    background: rgba(255,255,255,0.9);
+    opacity: 1;
+  }
   h1 {
     float: left;
-    padding: 5px 10px;
+    padding: 5px 20px;
     font-size: 2rem;
   }
   nav ul {
@@ -42,10 +50,9 @@ section.main {
   width: 100vw;
   header {
     position: relative;
-    padding: 150px 0 100px;
+    padding: 130px 0 100px;
     h1 {
       width: 90vw;
-      max-width: 800px;
       margin: 0 auto;
       border-radius: 100px;
       position: relative;
@@ -53,19 +60,18 @@ section.main {
       font-size: 2.3rem;
       color: white;
       text-align: center;
-      padding: 15px 30px 20px;
-      background: rgba(0,0,0,0.5);
-      box-sizing: border-box;
-      @media (max-width: 900px) {
-        font-size: 2em;
+      text-shadow: 2px 2px 4px black;
+      span {
+        display: block;
       }
       @media (max-width: 760px) {
         font-size: 1.7em;
         border-radius: 0;
-        width: 100vw;
       }
-      span {
-        display: block;
+      @media (max-width: 580px) {
+        span {
+          display: inline;
+        }
       }
     }
     img {
@@ -79,9 +85,16 @@ section.main {
   }
   & > div {
     max-width: 1000px;
-    width: 100vw;
-    margin: 50px auto;
-    padding: 0 20px;
+    width: 96vw;
+    margin: 30px auto;
+    padding: 30px 40px 35px;
+    @media (max-width: 760px) {
+      margin: 20px auto;
+      padding: 20px;
+    }
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px 0 #ccc;
     box-sizing: border-box;
   }
   h2 {
