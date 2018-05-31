@@ -29,6 +29,7 @@ header.fixed-header {
   transition: all 0.2s ease 0s; }
   header.fixed-header.scrolled {
     border: 1px solid rgba(0, 0, 0, 0.1);
+    border-width: 0 0 1px;
     background: rgba(255, 255, 255, 0.9);
     opacity: 1; }
   header.fixed-header h1 {
@@ -142,34 +143,39 @@ section.main {
       color: mediumseagreen; }
   section.main h2 + p, section.main h3 + p {
     padding: 0; }
+  section.main p + ul {
+    margin: 10px 0 0; }
   section.main ul li {
-    margin: 5px 0 0 30px; }
+    margin: 4px 0 0 30px; }
   section.main img.overview-logo {
     float: right;
     width: 200px;
     height: 200px;
-    padding: 20px; }
+    padding: 30px 20px 10px 30px; }
     @media (max-width: 760px) {
       section.main img.overview-logo {
         width: 100px;
         height: 100px;
-        padding: 10px; } }
+        padding: 35px 10px 10px 20px; } }
     @media (max-width: 550px) {
       section.main img.overview-logo {
         display: none; } }
   section.main dl.overview {
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    margin: 20px 0 0; }
     section.main dl.overview dt {
       float: left;
       width: 40px;
-      padding: 2px;
+      padding: 7px 2px;
       font-weight: bold;
       text-align: center; }
     section.main dl.overview dd {
       margin: 0 0 0 45px;
-      padding: 2px; }
+      padding: 7px 2px; }
       section.main dl.overview dd.percom {
         font-size: 1.3rem; }
+    section.main dl.overview dd + dd {
+      padding: 3px 2px 13px; }
   section.main dl.important-dates dt {
     float: left;
     width: 190px;
