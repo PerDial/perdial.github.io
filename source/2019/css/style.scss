@@ -219,27 +219,35 @@ section.main {
     }
   }
   dl.important-dates {
+    font-size: 1.1rem;
     dt {
       float: left;
-      width: 190px;
+      width: auto;
       padding: 2px;
       font-weight: bold;
     }
     dd {
       margin: 0 0 0 195px;
       padding: 2px;
+      @media (max-width: 760px) {
+        margin: 0 0 0 175px;
+      }
     }
   }
   dl.guideline {
+    font-size: 1.1rem;
     dt {
       float: left;
-      width: 130px;
+      width: auto;
       padding: 2px;
       font-weight: bold;
     }
     dd {
-      margin: 0 0 0 135px;
+      margin: 0 0 0 145px;
       padding: 2px;
+      @media (max-width: 760px) {
+        margin: 0 0 0 130px;
+      }
     }
   }
 
@@ -249,5 +257,5 @@ footer {
   border: 1px solid rgba(0,0,0,0.1);
   border-width: 1px 0 0;
   text-align: center;
-  padding: 20px 0;
+  padding: 20px;
 }
