@@ -114,6 +114,11 @@ section.main {
         span {
           display: inline;
         }
+        small {
+          display: block;
+          max-width: 300px;
+          margin: 10px auto 0;
+        }
       }
     }
     img {
