@@ -97,7 +97,11 @@ section.main {
           font-size: 1.7em; } }
       @media (max-width: 580px) {
         section.main header h1 span {
-          display: inline; } }
+          display: inline; }
+        section.main header h1 small {
+          display: block;
+          max-width: 300px;
+          margin: 10px auto 0; } }
     section.main header img {
       position: absolute;
       top: 0;
