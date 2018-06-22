@@ -22,7 +22,7 @@ gulp.task("ejs", function() {
     var json = JSON.parse(fs.readFileSync("./source/variables.json"));
     gulp.src(["./source/**/*.ejs", "!./source/template/*.ejs"], { base: "./source" })
         .pipe(plumber())
-        .pipe(ejs(json, {"ext": ".html"}))
+        .pipe(ejs(json, {}, {ext: ".html"}))
         .pipe(gulp.dest("./docs/"))
         .pipe(browser.reload({stream:true}));
 });
