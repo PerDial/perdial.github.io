@@ -87,7 +87,7 @@
 
   <div id="organizers">
     <h2><i class="fa fa-user-circle-o"></i>Organizers</h2>
-    <h3>Program Committee (*potential) (*sorted by family name)</h3>
+    <h3>Program Committee (*sorted by family name)</h3>
     <ul>
       <li>Prof. Yutaka Arakawa (Nara Institute of Science and Technology, Japan)</li>
       <li>Prof. Wolfgang Minker (Ulm University, Germany)</li>
@@ -107,7 +107,7 @@
 </footer>
 
 <script
-  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 <script>
@@ -122,7 +122,6 @@ $(window).scroll(function() {
     $("#fixed-header").removeClass("scrolled");
   }
 });
-$(function() {console.log("check");});
 $("#primary-nav li").click(function() {
   var target = $(this).data("target");
   $("html, body").animate({scrollTop:$("#" + target).offset().top - 50});
