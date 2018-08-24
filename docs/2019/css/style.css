@@ -130,7 +130,12 @@ section.main {
       font-size: 1.6rem; }
   section.main h3 {
     padding: 15px 0 5px;
-    font-size: 1.4rem; }
+    font-size: 1.4rem;
+    line-height: 1em; }
+    section.main h3 span {
+      font-size: 1rem;
+      display: inline-block;
+      color: gray; }
   section.main h2 + h3 {
     padding: 10px 0 5px; }
   section.main p {
@@ -154,7 +159,16 @@ section.main {
   section.main p + ul {
     margin: 10px 0; }
   section.main ul li {
-    margin: 4px 0 0 30px; }
+    margin: 4px 0 0 30px;
+    list-style: circle; }
+  section.main ul.person-list li span {
+    color: gray;
+    font-size: 0.8em;
+    padding: 0 0 0 10px; }
+    @media (max-width: 760px) {
+      section.main ul.person-list li span {
+        display: block;
+        padding: 0; } }
   section.main img.overview-logo {
     float: right;
     width: 200px;
