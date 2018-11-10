@@ -225,6 +225,12 @@ section.main {
         section.main dl.guideline dd {
           margin: 0 0 0 130px; } }
 
+.extended {
+  padding: 0 0 0 5px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: red; }
+
 footer {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-width: 1px 0 0;
