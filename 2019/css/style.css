@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Barlow");
+@import url("https://fonts.googleapis.com/css?family=Barlow:400,500");
 * {
   padding: 0;
   margin: 0; }
@@ -224,6 +224,23 @@ section.main {
       @media (max-width: 760px) {
         section.main dl.guideline dd {
           margin: 0 0 0 130px; } }
+  section.main p.chair {
+    color: gray;
+    font-style: italic; }
+  section.main ul.program li span {
+    font-weight: bold;
+    display: block; }
+  section.main div.keynote {
+    padding: 20px 10px 10px; }
+    section.main div.keynote img {
+      float: left;
+      width: 30%;
+      max-width: 200px;
+      padding: 0 5% 10px 0; }
+    section.main div.keynote h4 {
+      font-size: 1.3em; }
+    section.main div.keynote span {
+      font-size: 1.2em; }
 
 .news {
   padding: 0 0 0 5px;
