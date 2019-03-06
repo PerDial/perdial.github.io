@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Barlow');
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,500');
 
 * {
   padding: 0;
@@ -275,7 +275,33 @@ section.main {
       }
     }
   }
-
+  p.chair {
+    color: gray;
+    font-style: italic;
+  }
+  ul.program {
+    li {
+      span {
+        font-weight: bold;
+        display: block;
+      }
+    }
+  }
+  div.keynote {
+    padding: 20px 10px 10px;
+    img {
+      float: left;
+      width: 30%;
+      max-width: 200px;
+      padding: 0 5% 10px 0;
+    }
+    h4 {
+      font-size: 1.3em;
+    }
+    span {
+      font-size: 1.2em;
+    }
+  }
 }
 
 .news {
