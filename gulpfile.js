@@ -1,15 +1,17 @@
 // gulp v4.0.2
 
-var gulp = require("gulp");
-var fs = require("fs");
-var ejs = require("gulp-ejs");
-var sass = require("gulp-sass");
-var uglify = require("gulp-uglify");
-var browser = require("browser-sync");
-var plumber = require("gulp-plumber");
+const gulp = require("gulp");
+const fs = require("fs");
+const ejs = require("gulp-ejs");
+const sass = require("gulp-sass");
+const uglify = require("gulp-uglify");
+const browserSync = require("browser-sync");
+const plumber = require("gulp-plumber");
+const rename = require('gulp-rename')
 
-gulp.task("server", function() {
-    browser({
+// browser sync
+gulp.task("server", () => {
+    return browserSync.init({
         server: {
             baseDir: "./docs",
             startPath: '/perdial/',
@@ -20,37 +22,46 @@ gulp.task("server", function() {
     });
 });
 
-gulp.task("ejs", function() {
-    var json = JSON.parse(fs.readFileSync("./source/variables.json"));
-    gulp.src(["./source/**/*.ejs", "!./source/template/*.ejs"], { base: "./source" })
+// reload
+gulp.task("reload", (done) => {
+    browserSync.reload();
+    done();
+});
+
+// EJS
+gulp.task("ejs", () => {
+    var ts = Date.now();
+    var variables = JSON.parse(fs.readFileSync("./source/variables.json"));
+    return gulp.src(["./source/**/*.ejs", "!./source/template/*.ejs"], { base: "./source" })
         .pipe(plumber())
-        .pipe(ejs(json, {}, {ext: ".html"}))
-        .pipe(gulp.dest("./docs/"))
-        .pipe(browser.reload({stream:true}));
+        .pipe(ejs(variables))
+        .pipe(rename({ extname: '.html' }))
+        .pipe(gulp.dest("./docs/"));
 });
  
 gulp.task("sass", function() {
-    gulp.src("./source/**/*.scss")
+    return gulp.src("./source/**/*.scss")
         .pipe(plumber())
         .pipe(sass())
-        .pipe(gulp.dest("./docs/"))
-        .pipe(browser.reload({stream:true}));
+        .pipe(gulp.dest("./docs/"));
 });
 
 gulp.task("js", function() {
-    gulp.src(["./source/**/*.js"])
+    return gulp.src(["./source/**/*.js"])
         .pipe(plumber())
         .pipe(uglify())
-        .pipe(gulp.dest("./docs/"))
-        .pipe(browser.reload({stream:true}));
+        .pipe(gulp.dest("./docs/"));
 });
 
-gulp.task("reload", function() {
-    browser.reload();
+// watch
+gulp.task("watch", (done) => {
+    gulp.watch("./source/**/*.ejs", gulp.series("ejs", "reload"));
+    gulp.watch("./source/**/*.js",  gulp.series("js", "reload"));
+    gulp.watch("./source/**/*.scss",gulp.series("sass", "ejs", "reload"));
+    done();
 });
 
-gulp.task("default", gulp.series( gulp.parallel("server"), function() {
-    gulp.watch("./source/**/*.ejs", ["ejs"]);
-    gulp.watch("./source/**/*.js",  ["js"]);
-    gulp.watch("./source/**/*.scss",["sass"]);
-}));
+// scripts tasks
+gulp.task('default',
+    gulp.parallel('watch', 'server')
+);
