@@ -20,13 +20,16 @@
   },
   "homepage": "https://perdial.github.io/",
   "devDependencies": {
-    "browser-sync": "^2.18.5",
-    "ejs": "^2.5.5",
-    "fs": "0.0.1-security",
-    "gulp": "^3.9.1",
-    "gulp-ejs": "^3.1.3",
-    "gulp-plumber": "^1.1.0",
-    "gulp-sass": "^4.0.1",
-    "gulp-uglify": "^3.0.0"
+    "browser-sync": "^2.26.7",
+    "ejs": "^3.0.1",
+    "fs": "^0.0.1-security",
+    "gulp": "^4.0.2",
+    "gulp-ejs": "^5.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {
+    "npm-check-updates": "^4.0.2"
   }
 }

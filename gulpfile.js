@@ -1,3 +1,5 @@
+// gulp v4.0.2
+
 var gulp = require("gulp");
 var fs = require("fs");
 var ejs = require("gulp-ejs");
@@ -47,8 +49,8 @@ gulp.task("reload", function() {
     browser.reload();
 });
 
-gulp.task("default", ["server"], function() {
+gulp.task("default", gulp.series( gulp.parallel("server"), function() {
     gulp.watch("./source/**/*.ejs", ["ejs"]);
     gulp.watch("./source/**/*.js",  ["js"]);
     gulp.watch("./source/**/*.scss",["sass"]);
-});
+}));
