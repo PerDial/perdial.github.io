@@ -20,7 +20,7 @@
   },
   "homepage": "https://perdial.github.io/",
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.27.10",
     "ejs": "^3.0.1",
     "fs": "^0.0.1-security",
     "gulp": "^4.0.2",
